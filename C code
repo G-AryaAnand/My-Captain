@@ -1,0 +1,11 @@
+ #include <bits/stdc++.h>
+ using namespace std;
+  int main() { 
+    int x=10,y=20;
+    printf("intial value of x and y are x: %d & y:%d ",x,y);
+    x+=y;
+    y=x-y;
+    x-=y;
+   printf("final value of x and y are x: %d & y:%d ",x,y);
+    return 0;
+}
