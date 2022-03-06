@@ -1,0 +1,21 @@
+# include <bits/stdc++.h>
+using namespace std;
+int m=0;
+void FindSum(int n){
+    if(n==0)
+    return;
+    else{
+    int LastDigit=n%10;
+    m+=LastDigit;
+    FindSum(n/10);}
+return ;
+}
+int main(){
+    int n;
+    printf("Input Number: ");
+    scanf("%d",&n);
+    printf("\n");
+    FindSum(n);
+    printf("Sum of digits: %d",m);
+    return 0;
+}
