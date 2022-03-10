@@ -1,0 +1,45 @@
+# include <bits/stdc++.h>
+using namespace std;
+int main() {
+    
+    int a[3][3];
+    int *ptr;
+    
+    int principal_diagonal=0;
+    int off_diagonal=0;
+    printf("Input elements in the matrix: \n");
+   
+
+    for(int i=0;i<3;i++){
+        for(int j =0;j<3;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+     ptr=&a[0][0];
+    
+    for(int i=0;i<3;i++){
+        for(int j =0;j<3;j++){
+
+            printf("element - [%d],[%d] : %d\n",i,j,*(ptr+(3*i)+j));
+            if(i==j){
+            principal_diagonal+=*(ptr+3*i)+j;}
+            if(i+j==2){
+            off_diagonal+=(*(ptr+3*i)+j);}
+
+        }
+    }
+    printf("\nThe matrix is\n");
+    for(int i=0;i<3;i++){
+        for(int j =0;j<3;j++){
+
+            printf("%d\t",*(ptr+(3*i)+j));
+
+        }
+        printf("\n");
+    }
+
+    printf("The sum of Diagonal elements is : %d \t for Off-Diagonal elements its : %d",principal_diagonal,off_diagonal);
+    
+    return 0;
+}
