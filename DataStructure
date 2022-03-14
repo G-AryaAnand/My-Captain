@@ -1,0 +1,37 @@
+# include <bits/stdc++.h>
+using namespace std;
+struct Employee{
+    char Name[30];
+     int No;
+    int Age;
+    int Salary;
+
+}emp[20];
+
+void display( Employee p ){
+printf("Name\tAge\tPhone No\tSalary\n");
+printf("%s\t%d\t%d\t\t%d",p.Name,p.Age,p.No,p.Salary);
+}
+int main() {
+    
+
+    for(int i=0;i<20;i++){
+        
+        int a;int s; int n;
+        
+        scanf("%s",emp[i].Name);
+        scanf("%d",&a);
+        scanf("%d",&n);
+        scanf("%d",&s);
+        
+        emp[i].Age=a;
+        emp[i].No=n;
+        emp[i].Salary=s;
+        
+    }
+    int j;
+    
+    scanf("%d",&j);
+    display(emp[j]);
+    return 0;
+}
