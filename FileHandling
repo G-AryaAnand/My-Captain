@@ -1,0 +1,33 @@
+# include <bits/stdc++.h>
+#include<conio.h>
+using namespace std;
+
+int main() {
+    FILE *fp1,*fp2,*fp3;
+    char ch[30],ch2[30];
+    char c;int i=0;
+    printf("Give Input for new file (Max 30 characters):");
+    fp1=fopen("newfile.txt","w");
+    gets(ch);
+    fprintf(fp1,"%s",ch);
+    fclose(fp1);
+
+    fp2=fopen("newfile.txt","r");
+    for(int j=0;j<30;j++){
+        c=fgetc(fp2);
+        printf("%c",c);
+        if(c==EOF)
+        break;
+        ch2[i++]=c;
+        
+    }
+    printf("Output: ");
+    fclose(fp2);
+    for(i=i-1;i>=0;i--){
+        printf("%c",ch2[i]);
+    }
+    fp3=fopen("fresh.txt","w");
+    fprintf(fp3,"%s",ch2);
+    fclose(fp3);
+    return 0;
+}
